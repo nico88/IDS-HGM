@@ -1,8 +1,13 @@
 /*
  * Necesitas ayuda con los colores?
  * http://www.colourlovers.com/palettes
+ * 
+ * Propiedades de CSS:
+ * 	color: #hex  -Color del texto
+ *  font-weight: normal|bold -negrita o normal
+ *  text-decoration: underline|none|overline
+ *  font-style: italic|normal
  * */
- 
 body{
 	width:500px;
 	display:block;
