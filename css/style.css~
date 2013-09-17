@@ -12,8 +12,7 @@ body{
 	width:500px;
 	display:block;
 	margin:50px auto;
-	background-color:#000;
-	color:#FFF;
+	background-color:;
 }
 
 p{
@@ -31,8 +30,7 @@ p{
 	}
 
 	p b:hover{
-		font-weight:normal;/*norma|bold*/
+		font-weight:;/*norma|bold*/
 		text-decoration:;
-		font-style:italic;
+		font-style:;
 	}
-
