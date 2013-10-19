@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Git For Fun</title>
+		<style>
+			body{width:80%; margin:0 auto; font-family:Helvetica, Verdana,'Sans Serif'; color:#222; background-color:#FAFAFA;}
+			p{margin-left:1.5em;}
+			p code{display:block; width:100%; margin: .5em 1em; color:#2224AB}
+			li code{color:#F00;}
+		</style>
+	</head>
+	<body>
+		<h1>GFF, Making GIT your BFF</h1>
+		
+		<h2>Primeros pasos</h2>
+		<p>
+			El primer paso de este ejercicio-tuturial es crear el repositorio.
+			<code>git init</code>
+		</p>
+		
+		<p>
+			Si bien podríamos clonar un repo remoto, la idea es hacerlo de otra forma
+			<code>git remote add origin https://github.com/nico88/IDS-HGM</code>
+			En la sentencia anterior, podemos asignarle al repositorio remoto el nombre que creamos conventiente para nuestro trabajo.
+			Sin embargo, para este ejercicio particular, nombrarlo <i>ORIGIN</i> tendrá algunos beneficios.
+		</p>
+
+<hr>
+
+		<h2>Obtener los archivos a modifircar</h2>
+		<p>
+			Obtener la rama master
+			<code>git pull origin master</code>
+		</p>
+		
+		<p>
+			<b>Creamos una rama nueva</b>
+			<code>git checkout -b nombre_rama</code>
+		</p>
+		
+		<p style="color:#F00;"><b>Divertite poniendo colores!</b></p>
+		
+		<p>
+			OK. Te gusto lo que hicite? mandalo al server!
+			<code>git add *</code>
+			<code>git commit -m "un mensaje para el grupo"</code>
+			<code>git push origin nombre_rama</code>
+			Con el comando anterior subiste tu rama al server (solo la rama nombre_rama).
+		</p>
+		
+	<hr>
+	
+		<h2>Revisión de todas las ramas</h2>
+		<p>
+			Obtenemos todas las ramas remotas
+			<code>git fetch --all</code>			
+		</p>
+		
+		<p>
+			<b>Probamos las distintas ramas para ver las COLORIDAS propuestas</b>
+			<code>git checkout nombre_de_la_rama_a_checkear</code>
+		</p>
+		
+		<p>
+			Encontramos la rama ganadora y decidimos hacer los cambios efectivos.
+			<code>git checkout master</code>
+			<code>git merge nombre_rama_elegida --commit</code>
+		</p>
+		
+		<p>
+			Enviamos la nueva version al servidor
+			<code>git push origin master</code>
+		</p>
+		
+		<h3>NOS ARREPENTIMOS!!!</h3>
+		<p>
+			Decidimos que la versión original era "más mejor" y LA VAMOS A RECUPERAR!
+			<code>git reset --hard commit_sha</code>
+		</p>
+		<p>
+			Enviamos la "nueva vieja" rama al servidor
+			<code>git push origin master</code>
+			<i>UPS!</i>
+			<code>git push --force origin master</code>
+		</p>
+		
+	<hr>
+		
+		<h1>Comandos útiles</h1>
+		<ul>
+			<li><code>git remote -v</code> Muetra todos los repositorios</li>
+			<li><code>git branch -a</code> Muestra todas las ramas locales y remotas</li>
+			<li><code>git fetch --all</code> Obtiene todas las ramas </li>
+			<li><code>git log --oneline</code> Muestra los commits en una sola linea</li>
+			<li><code>git log --graph</code> Muestra los commits y los merge en forma de arbol</li>
+			<li><code>git log --stat</code> Muestra las estadisticas de cambios</li>
+			<li><code>git merge rama_merge --commit</code> Une la rama actual con rama_merge y realiza un commit</li>
+			<li><code>git reset --hard commit_sha</code></li>
+		</ul>
+	</body>
+</html>
